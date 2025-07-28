@@ -18,6 +18,5 @@ mlflow.set_tracking_uri("https://dagshub.com/praveen703/MLFLow_Training.mlflow")
 if __name__ == "__main__":
     mlflow.create_experiment(
         name="testing_mlflow1",
-        artifact_location="https://dagshub.com/praveen703/MLFLow_Training.mlflow/artifacts",
         tags={"env": "dev", "version": "1.0.0"}
     )

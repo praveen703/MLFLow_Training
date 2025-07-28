@@ -11,9 +11,9 @@ from mlflow.models.signature import infer_signature
 import joblib
 import dagshub
 
-dagshub.init(repo_owner='praveen703', repo_name='mlflow', mlflow=True)
+dagshub.init(repo_owner='praveen703', repo_name='MLFLow_Training', mlflow=True)
 
-mlflow.set_tracking_uri("https://dagshub.com/praveen703/mlflow.mlflow")
+mlflow.set_tracking_uri("https://dagshub.com/praveen703/MLFLow_Training.mlflow")
 
 if __name__ == "__main__":
     #create a new workflow experiment

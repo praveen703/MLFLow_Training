@@ -32,41 +32,41 @@ mlflow.set_experiment("isis-dt")
 
 # with mlflow.start_run():
 
-#     dt = DecisionTreeClassifier(max_depth=max_depth)
+    dt = DecisionTreeClassifier(max_depth=max_depth)
 
-#     dt.fit(X_train, y_train)
+    dt.fit(X_train, y_train)
 
-#     y_pred = dt.predict(X_test)
+    y_pred = dt.predict(X_test)
 
-#     accuracy = accuracy_score(y_test,y_pred)
+    accuracy = accuracy_score(y_test,y_pred)
 
-#     mlflow.log_metric('accuracy',accuracy)
+    mlflow.log_metric('accuracy',accuracy)
 
-#     mlflow.log_param('max_depth', max_depth)
+    mlflow.log_param('max_depth', max_depth)
 
-#     # Create a confusion matrix plot
-#     cm = confusion_matrix(y_test,y_pred)
-#     plt.figure(figsize=(6,6))
-#     sns.heatmap(cm,annot=True,fmt='d',cmap='Blues',xticklabels=iris.target_names)
-#     plt.ylabel('Actual')
-#     plt.xlabel('Predicted')
-#     plt.title('Confusion Matrix')
+    # Create a confusion matrix plot
+    cm = confusion_matrix(y_test,y_pred)
+    plt.figure(figsize=(6,6))
+    sns.heatmap(cm,annot=True,fmt='d',cmap='Blues',xticklabels=iris.target_names)
+    plt.ylabel('Actual')
+    plt.xlabel('Predicted')
+    plt.title('Confusion Matrix')
 
-#     #Save the plot as an artifact
-#     plt.savefig("confusion_matrix.png")
+    #Save the plot as an artifact
+    plt.savefig("confusion_matrix.png")
 
-#     # mlflow code
-#     mlflow.log_artifact("confusion_matrix.png")
+    # mlflow code
+    # mlflow.log_artifact("confusion_matrix.png")
 
-#     #mlflow code
-#     mlflow.log_artifact(__file__)
+    #mlflow code
+    # mlflow.log_artifact(__file__)
 
-#     # mlflow.sklearn.log_model(dt, "decision_tree")
-#     mlflow.sklearn.log_model(dt, "decision_tree")
-#     # joblib.dump(dt, "decision_tree.pkl")
-#     # mlflow.log_artifact("decision_tree.pkl")
+    # mlflow.sklearn.log_model(dt, "decision_tree")
+    # mlflow.sklearn.log_model(dt, "decision_tree")
+    # joblib.dump(dt, "decision_tree.pkl")
+    # mlflow.log_artifact("decision_tree.pkl")
 
-#     mlflow.set_tag('author','praveen')
-#     mlflow.set_tag('model','decision tree')
+    mlflow.set_tag('author','praveen')
+    mlflow.set_tag('model','decision tree')
 
-#     print('accuracy', accuracy)
+    print('accuracy', accuracy)

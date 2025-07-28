@@ -30,7 +30,7 @@ max_depth = 1
 
 mlflow.set_experiment("isis-dt")
 
-# with mlflow.start_run():
+with mlflow.start_run():
 
     dt = DecisionTreeClassifier(max_depth=max_depth)
 

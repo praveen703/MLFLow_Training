@@ -19,5 +19,5 @@ if __name__ == "__main__":
     #create a new workflow experiment
     mlflow.create_experiment(
         name="testing_mlflow1",
-        tags={"env":"dev","version":"1.0.0"},
+        tags={"env":"dev","version":"1.0.0"}
     )

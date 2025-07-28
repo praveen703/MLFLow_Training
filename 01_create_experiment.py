@@ -16,8 +16,8 @@ dagshub.init(repo_owner='praveen703', repo_name='MLFLow_Training', mlflow=True)
 mlflow.set_tracking_uri("https://dagshub.com/praveen703/MLFLow_Training.mlflow")
 
 if __name__ == "__main__":
-    #create a new workflow experiment
     mlflow.create_experiment(
         name="testing_mlflow1",
-        tags={"env":"dev","version":"1.0.0"}
+        artifact_location="https://dagshub.com/praveen703/MLFLow_Training.mlflow/artifacts",
+        tags={"env": "dev", "version": "1.0.0"}
     )
